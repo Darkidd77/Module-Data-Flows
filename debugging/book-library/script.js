@@ -43,6 +43,12 @@ function submit() {
     myLibrary.push(book);
     render();
   }
+
+  // clear the form after submit
+  title.value = "";
+  author.value = "";
+  pages.value = "";
+  check.checked = false;
 }
 
 function Book(title, author, pages, check) {
