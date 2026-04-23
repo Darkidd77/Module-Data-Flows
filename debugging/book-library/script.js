@@ -31,14 +31,7 @@ function submit() {
   const authorVal = authorInput.value.trim();
   const pagesVal = parseInt(pagesInput.value, 10);
 
-  if (
-    titleVal == null ||
-    titleVal == "" ||
-    authorVal == null ||
-    authorVal == "" ||
-    isNaN(pagesVal) ||
-    pagesVal <= 0
-  ) {
+  if (titleVal === "" || authorVal === "" || isNaN(pagesVal) || pagesVal < 1) {
     alert("Please fill all fields!");
     return false;
   } else {
